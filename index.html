@@ -1,90 +1,368 @@
-<!DOCTYPE html>
+
+<!doctype html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MotherFucker</title>
-  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="stylesheet.css">
-</head>
+  <meta charset="UTF-8">
+	<title>意匠展2022</title>
+	<meta name="Keywords" content="意匠展, 千葉大学, 工学部, デザインコース, デザイン科, デザイン学科">
+	<meta name="Description" content="2021年度千葉大学工学部総合工学科デザインコース卒業生による卒業研究・制作展。">
+	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="favicons/favicon.ico">
+	<link rel="icon" type="image/vnd.microsoft.icon" href="favicons/favicon.ico">
+	<link rel="apple-touch-icon" type="image/png" href="favicons/apple-touch-icon-180x180.png">
+	<link rel="icon" type="image/png" href="favicons/icon-192x192.png">
+	<link rel="stylesheet" href="css/style.css">
 <body>
-  <header>
-    <div class="container">
-      <div class="header-left">
-        <img class="logo" src="https://prog-8.com/images/html/advanced/main_logo.png">
-      </div>
-      <span class="fa fa-bars menu-icon"></span>
-      <div class="header-right">
-        <a href="#">ラッスン</a>
-        <a href="#">新規登録</a>
-        <a href="#" class="login">ログイン</a>
-      </div>
-    </div>
-  </header>
-  <div class="top-wrapper">
-    <div class="container">
-      <h1>LEARN TO CODE.<br>LEARN TO BE CREATIVE.</h1>
-      <p>Progateはオンラインプログラミング学習サービスです。<br>初心者にもやさしいスライドとレッスンで、ウェブサービスを作りながらプログラミングを学んでいきましょう。</p>
-      <div class="btn-wrapper">
-        <a href="#" class="btn signup">新規登録はこちら</a>
-        <p>or</p>
-        <a href="#" class="btn facebook"><span class="fa fa-facebook"></span>Facebookで登録</a>
-        <a href="#" class="btn twitter"><span class="fa fa-twitter"></span>Twitterで登録</a>
-      </div>
-    </div>
-  </div>
-  <div class="lesson-wrapper">
-    <div class="container">
-      <div class="heading">
-        <h2>Learn Where to Get Started!</h2>
-      </div>
-      <div class="lessons">
-        <div class="lesson">
-          <div class="lesson-icon">
-            <img src="https://prog-8.com/images/html/advanced/html.png">
-            <p>HTML & CSS</p>
-          </div>
-          <p class="text-contents">ウェブページの作成に使用される言語です。HTMLとCSSを組み合わせることで、静的なページを作り上げることができます。</p>
-        </div>
-        <div class="lesson">
-          <div class="lesson-icon">
-            <img src="https://prog-8.com/images/html/advanced/jQuery.png">
-            <p>jQuery</p>
-          </div>
-          <p class="text-contents">素敵な動きを手軽に実装できるJavaScriptライブラリです。 アニメーション効果をつけたり、Ajax（エイジャックス）を使って外部ファイルを読み込んだりと色々なことができます。</p>
-        </div>
-        <div class="lesson">
-          <div class="lesson-icon">
-            <img src="https://prog-8.com/images/html/advanced/ruby.png">
-            <p>Ruby</p>
-          </div>
-          <p class="text-contents">オープンソースの動的なプログラミング言語で、 シンプルさと高い生産性を備えています。大きなWebアプリケーションから小さな日用ツールまで、さまざまなソフトウェアを作ることができます。</p>
-        </div>
-        <div class="lesson">
-          <div class="lesson-icon">
-            <img src="https://prog-8.com/images/html/advanced/php.png">
-            <p>PHP</p>
-          </div>
-          <p class="text-contents">HTMLだけではページの内容を変えることはできません。PHPはHTMLにプログラムを埋め込み、それを可能にします。</p>
-        </div>
-      </div>
-      <div class="clear"></div>
-    </div>
-  </div>
-  <div class="message-wrapper">
-    <div class="container">
-      <div class="heading">
-        <h2>さぁ、あなたもProgateでプログラミングを学んでみませんか?</h2>
-        <h3>Let's learn to code, learn to be creative!</h3>
-      </div>
-      <span class="btn message">さっそく開発する</span>
-    </div>
-  </div>
-  <footer>
-    <div class="container">
-      <img src="https://prog-8.com/images/html/advanced/footer_logo.png">
-      <p>Learn to Code, Learn to be Creative.</p>
-    </div>
-  </footer>
+  <!--ロード画面-->
+	<div id="load"><div class="loader"></div></div>
+	
+	<!--depth-->
+	<div id="log" class="sink">
+		<div id="M">
+			<h1 class="depth depth_D">Depth</h1>
+			<h2 id="log0" class="depth">0</h2>
+			<h1 class="depth depth_m">m</h1>
+		</div>
+	</div>
+	
+	<!--背景画像
+	<div id="imgPa" class="imgSc">
+		<div id="img" class="imgSc"></div>
+	</div>-->
+	<!--スマホ用
+	<div id="imgPa_sp" class="imgSc_sp">
+		<div id="img_sp" class="imgSc_sp"></div>
+	</div>-->
+	
+	<!--メイン-->
+	<div id="input">
+		<div id="z-index0" class="last_back">
+			<img class="img_pc visual" src="image/visual_pc_4.jpg" alt="">
+			<img class="img_sp visual" src="image/visual_sp_4.jpg" alt="">
+		</div>
+		<div id="z-index1" class="layer">
+			<img class="img_pc visual" src="image/visual_pc_1.jpg" alt="">
+			<img class="img_sp visual" src="image/visual_sp_1.jpg" alt="">
+		</div>
+		<!--意匠展ロゴ-->
+		<div id="z-index5" class="ishouten"><img src="image/logo_tate.png" alt="logo"></div>
+		
+		<!--開催概要
+		<div id="z-index0" class="info">
+			<img class="img_pc" src="image/date_pc.svg" alt="date">
+			<img class="img_sp" src="image/date_sp.svg" alt="date">
+			<div class="sns">
+				<a class="icon" href="https://twitter.com/ishoten2022"><img src="image/twitter.svg" alt="twitter"></a>
+				<a class="icon" href="https://www.instagram.com/ishoten_2022/"><img src="image/instagram.svg" alt="instagram"></a>
+			</div>
+		</div>
+                -->
+		
+		<div id="z-index2" class="layer">
+			<img class="img_pc visual" src="image/visual_pc_2.jpg" alt="">
+			<img class="img_sp visual" src="image/visual_sp_2.jpg" alt="">
+		</div>
+		<!--what-->
+		<div id="z-index11" class="layer">
+			<div id="what">
+				<img class="img_pc" src="image/what_pc.svg" alt="what">
+				<img class="img_sp" src="image/what_sp.svg" alt="what">
+			</div>
+		</div>
+		
+		<div id="z-index3" class="layer">
+			<img class="img_pc visual" src="image/visual_pc_3.jpg" alt="">
+			<img class="img_sp visual" src="image/visual_sp_3.jpg" alt="">
+		</div>
+		<!--concept-->
+		<div id="z-index6" class="layer">
+			<div id="concept">
+				<img class="img_pc" src="image/concept_pc.svg" alt="concept">
+				<img class="img_sp" src="image/concept_sp.svg" alt="concept">
+			</div>
+		</div>
+		
+		<div id="honbun">
+			<div id="header">
+				<div class="header_inner">
+					<img class="header_img" src="image/logo_yoko.png">	
+					<nav class="pc-nav">
+						<ul class="pc-nav-list">
+							<li><a class="jump" href="#">TOP</a></li>
+							<li><a class="jump" href="#kenkyu">研究室紹介</a></li>
+							<li><a class="jump" href="#kaisai">開催概要</a></li>
+							<li><a class="jump" href="#yoyaku">事前予約について</a></li>
+							<li><a class="jump" href="#goudou">合同卒展について</a></li>
+							<li><a class="jump" href="#kyousan">協賛企業</a></li>
+							<li><a class="jump icon" href="https://twitter.com/ishoten2022"><img class="icon_pc" src="image/twitter.svg" alt="twitter"><img class="icon_sp" src="image/twitter_black.svg" alt="twitter_black"></a></li>
+							<li><a class="jump icon" href="https://www.instagram.com/ishoten_2022/"><img class="icon_pc" src="image/instagram.svg" alt="instagram"><img class="icon_sp" src="image/instagram_black.svg" alt="instagram_black"></a></li>
+							<li><a class="jump icon" href="https://note.com/ishoten2022"><img class="icon_pc" src="image/note.svg" alt="note"><img class="icon_sp" src="image/note_black.svg" alt="note_black"></a></li>
+						</ul>
+					</nav>
+					<svg class="ham" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+               					<g>
+                    					<path id="bar1" d="M3 3H43" stroke="white" stroke-width="4.68085" stroke-linecap="square" />
+                    					<path id="bar2" d="M3 23H43" stroke="white" stroke-width="4.68085" stroke-linecap="square" />
+                    					<path id="bar3" d="M3 43H43" stroke="white" stroke-width="4.68085" stroke-linecap="square" />
+               					</g>
+          				</svg>
+				</div>
+			</div>
+			<div id="shuuryou" class="contents">
+				<img class="shuuryou_sp" src="image/shuuryou_sp.svg" alt="会期終了">
+			</div>
+			<div id="poster_text" class="contents">
+				<img class="poster_text_pc" src="image/poster_text.svg" alt="概要">	
+				<img class="poster_text_sp" src="image/poster_text_sp.svg" alt="概要_sp">
+			</div>
+			<div id="kenkyu" class="contents">
+				<h3 class="menu">研究室紹介</h3>
+				<div class="tabs">
+					<input id="seihin" type="radio" name="tab_item" checked>
+						<label class="tab_item" for="seihin"><div>製品デザイン研究室</div></label>
+					<input id="sisupura" type="radio" name="tab_item">
+						<label class="tab_item" for="sisupura"><div>システムプランニング研究室</div></label>
+					<input id="maneji" type="radio" name="tab_item">
+						<label class="tab_item" for="maneji"><div>デザインマネージメント研究室</div></label>
+					<input id="zairyou" type="radio" name="tab_item">
+						<label class="tab_item" for="zairyou"><div>材料計画研究室</div></label>
+					<input id="ishou" type="radio" name="tab_item">
+						<label class="tab_item" for="ishou"><div>意匠形態学研究室</div></label>
+					<input id="komyu" type="radio" name="tab_item">
+						<label class="tab_item" for="komyu"><div>コミュニケーションデザイン研究室</div></label>
+					<input id="ninjou" type="radio" name="tab_item">
+						<label class="tab_item" for="ninjou"><div>人間情報科学研究室</div></label>
+					<input id="shinri" type="radio" name="tab_item">
+						<label class="tab_item" for="shinri"><div>デザイン心理学研究室</div></label>
+					<input id="koma" type="radio" name="tab_item">
+						<label class="tab_item" for="koma"><div>コマーシャルデザイン研究室</div></label>
+					<input id="kankyou" type="radio" name="tab_item">
+						<label class="tab_item" for="kankyou"><div>環境デザイン研究室</div></label>
+					<input id="ninkou" type="radio" name="tab_item">
+						<label class="tab_item" for="ninkou"><div>人間生活工学研究室</div></label>
+					<input id="bunka" type="radio" name="tab_item">
+						<label class="tab_item" for="bunka"><div>デザイン文化計画研究室</div></label>
+					<input id="konteku" type="radio" name="tab_item">
+						<label class="tab_item" for="konteku"><div>コンテクスチュアルデザイン研究室</div></label>
+					<input id="sasute" type="radio" name="tab_item">
+						<label class="tab_item" for="sasute"><div>サスティナブルデザイン研究室</div></label>
+					<div class="tab_content" id="seihin_content">
+						<img class="kenkyu_img" src="image/seihin.svg">
+						<img class="kenkyu_img_sp" src="image/seihin_sp_img.jpg">
+						<img class="kenkyu_img_sp kenkyu_sp_h5" src="image/seihin_sp_h5.svg">
+						<!--<img class="kenkyu_img_sp" src="image/seihin_sp.svg">
+							<img src="image/seihinn.jpg" alt="製品デザイン研究室">
+						</div>
+						<img class="kenkyu_logo" src="image/seihinn_logo.svg" alt="製品デザイン研究室_ロゴ">
+						<h4>製品デザイン研究室</h4>
+						<h5>本研究室はトランスポーテーションデザインを主とする研究室である。生活の豊かさを目指し、交通や輸送機器に関する研究・開発を行い具体的なデザインコンセプト・造形作品を提案する。新しいデザイン手法の提案も行う。</h5>-->
+					</div>
+					<div class="tab_content" id="sisupura_content">
+						<img class="kenkyu_img" src="image/sispra.svg">
+						<img class="kenkyu_img_sp" src="image/sispra_sp_img.jpg">
+						<img class="kenkyu_img_sp kenkyu_sp_h5" src="image/sispra_sp_h5.svg">
+						<!--<img class="kenkyu_img_sp" src="image/sispra_sp.svg">
+							<img src="image/sispra.jpg" alt="システムプランニング研究室">
+						</div>
+						<img class="kenkyu_logo" src="image/sisupura_logo.svg" alt="システムプランニング研究室_ロゴ">
+						<h4>システムプランニング研究室</h4>
+						<h5>本研究室ではプロダクトやサービスを始め、多岐に渡るデザインを提案する。産学協同研究のプロジェクトや海外ワークショップに参画し、より実践的なデザインワークを行う。</h5>-->
+					</div>
+					<div class="tab_content" id="maneji_content">
+						<img class="kenkyu_img" src="image/manage.svg">
+						<img class="kenkyu_img_sp" src="image/manage_sp_img.jpg">
+						<img class="kenkyu_img_sp kenkyu_sp_h5" src="image/manage_sp_h5.svg">
+						<!--<img class="kenkyu_img_sp" src="image/manage_sp.svg">
+							<img src="image/management.jpg" alt="デザインマネジメント研究室">
+						</div>
+						<img class="kenkyu_logo" src="image/manage_logo.svg" alt="デザインマネジメント研究室_ロゴ">
+						<h4>デザインマネージメント研究室</h4>
+						<h5>商品やサービスのブランドやビジネスに至る様々なデザインを対象とする。手法やプロセス研究とともに海外大学や企業とのプロジェクトを実践し、グローバル性、創造性や課題解決力を高める。</h5>-->
+					</div>
+					<div class="tab_content" id="zairyou_content">
+						<img class="kenkyu_img" src="image/zairyo.svg">
+						<img class="kenkyu_img_sp" src="image/zairyo_sp_img.jpg">
+						<img class="kenkyu_img_sp kenkyu_sp_h5" src="image/zairyo_sp_h5.svg">
+						<!--<img class="kenkyu_img_sp" src="image/zairyo_sp.svg">
+							<img src="image/zairyou.jpg" alt="材料計画研究室">
+						</div>
+						<img class="kenkyu_logo" src="image/zairyo_logo.svg" alt="材料計画研究室_ロゴ">
+						<h4>材料計画研究室</h4>
+						<h5>材料が有している固有特性と属性との関係をデザイン科学の視点に立脚して研究し、材料計画の観点から［モノ-ヒト-環境］系における新たな価値の創造を目指す。</h5>-->
+					</div>
+					<div class="tab_content" id="ishou_content">
+						<img class="kenkyu_img" src="image/isho.svg">
+						<img class="kenkyu_img_sp" src="image/isho_sp_img.jpg">
+						<img class="kenkyu_img_sp kenkyu_sp_h5" src="image/isho_sp_h5.svg">
+						<!--<img class="kenkyu_img_sp" src="image/isho_sp.svg">
+							<img src="image/isyou.jpg" alt="意匠形態学研究室">
+						</div>
+						<img class="kenkyu_logo" src="image/isho_logo.svg" alt="意匠形態学研究室_ロゴ">
+						<h4>意匠形態学研究室</h4>
+						<h5>意匠形態学研究室は、あらゆる「物」「事」について形態学的視点から分析的および直感的アプローチを繰り返し、そのものの「すがた」「かたち」の意味について考察していく研究室である。</h5>-->
+					</div>
+					<div class="tab_content" id="komyu_content">
+						<img class="kenkyu_img" src="image/komyu.svg">
+						<img class="kenkyu_img_sp" src="image/komyu_sp_img.jpg">
+						<img class="kenkyu_img_sp kenkyu_sp_h5" src="image/komyu_sp_h5.svg">
+						<!--<img class="kenkyu_img_sp" src="image/komyu_sp.svg">
+							<img src="image/komyu.jpg" alt="コミュニケーションデザイン研究室">
+						</div>
+						<img class="kenkyu_logo" src="image/komyu_logo.svg" alt="コミュニケーションデザイン研究室_ロゴ">
+						<h4>コミュニケーションデザイン研究室</h4>
+						<h5>コミュニケーションデザインとは、メディアに効果的で魅力に富むメッセージを織り込むことで、対話関係を成立、促進させる行為である。本研究室では、それらの表現技術、計画手法、評価方法等について研究する。</h5>-->
+					</div>
+					<div class="tab_content" id="ninjou_content">
+						<img class="kenkyu_img" src="image/ninjo.svg">
+						<img class="kenkyu_img_sp" src="image/ninjo_sp_img.jpg">
+						<img class="kenkyu_img_sp kenkyu_sp_h5" src="image/ninjo_sp_h5.svg">
+						<!--<img class="kenkyu_img_sp" src="image/ninjo_sp.svg">
+							<img src="image/ninzyou.jpg" alt="人間情報科学研究室">
+						</div>
+						<img class="kenkyu_logo" src="image/ninnjyo_logo.svg" alt="人間情報科学研究室_ロゴ">
+						<h4>人間情報科学研究室</h4>
+						<h5>人間情報科学研究室では、より人間特性に合致したヒューマンインタフェースの実現を目指し、人間の多様な情報処理に関する諸問題について、生体工学やデジタル技術等を使い多視点から研究と提案を行う。</h5>-->
+					</div>
+					<div class="tab_content" id="shinri_content">
+						<img class="kenkyu_img" src="image/sinrigaku.svg">
+						<img class="kenkyu_img_sp" src="image/sinrigaku_sp_img.jpg">
+						<img class="kenkyu_img_sp kenkyu_sp_h5" src="image/sinrigaku_sp_h5.svg">
+						<!--<img class="kenkyu_img_sp" src="image/sinrigaku_sp.svg">
+							<img src="image/sinnrigaku.jpg" alt="デザイン心理学研究室">
+						</div>
+						<img class="kenkyu_logo" src="image/sinnrigaku_logo.svg" alt="デザイン心理学研究室_ロゴ">
+						<h4>デザイン心理学研究室</h4>
+						<h5>日本で唯一のデザイン心理学研究室は、"デザイン"の領域における問題解決に"心理学"の知見を応用することによって、科学的根拠に基づいたデザインの実現を目指すという革新的な試みを行う。</h5>-->
+					</div>
+					<div class="tab_content" id="koma_content">
+						<img class="kenkyu_img" src="image/koma.svg">
+						<img class="kenkyu_img_sp" src="image/koma_sp_img.jpg">
+						<img class="kenkyu_img_sp kenkyu_sp_h5" src="image/koma_sp_h5.svg">
+						<!--<img class="kenkyu_img_sp" src="image/koma_sp.svg">
+							<img src="image/koma.JPG" alt="コマーシャルデザイン研究室">
+						</div>
+						<img class="kenkyu_logo" src="image/koma_logo.svg" alt="コマーシャルデザイン研究室_ロゴ">
+						<h4>コマーシャルデザイン研究室</h4>
+						<h5>世の中の全ての商品に、デザインの関与する余地があると考える。本研究室では消費の局面における商品のありかた、「モノ」と消費者をつなぐコミュニケーションの方法、コンテクストの方法などを提案する。</h5>-->
+					</div>
+					<div class="tab_content" id="kankyou_content">
+						<img class="kenkyu_img" src="image/kankyo.svg">
+						<!--<img class="kenkyu_img_sp" src="image/kankyo_sp.svg">-->
+						<img class="kenkyu_img_sp" src="image/kankyo_sp_img.jpg">
+						<img class="kenkyu_img_sp kenkyu_sp_h5" src="image/kankyo_sp_h5.svg">
+							<!--<img src="image/kannkyou.jpg" alt="環境デザイン研究室">
+						</div>
+						<img class="kenkyu_logo" src="image/kannkyo_logo.svg" alt="環境デザイン研究室_ロゴ">
+						<h4>環境デザイン研究室</h4>
+						<h5>人間の心理や行動の特性把握に基づいた、望ましい環境のあり方や計画手法を研究し、デザインへの適用を目指している。対象は家具・室内計画、遊具、公共サイン計画、空間演出計画、地域活性化など多岐にわたる。</h5>-->
+					</div>
+					<div class="tab_content" id="ninkou_content">
+						<img class="kenkyu_img" src="image/ninko.svg">
+						<img class="kenkyu_img_sp" src="image/ninko_sp_img.jpg">
+						<img class="kenkyu_img_sp kenkyu_sp_h5" src="image/ninko_sp_h5.svg">
+						<!--<img class="kenkyu_img_sp" src="image/ninko_sp.svg">
+							<img src="image/ninnkou.jpg" alt="人間生活工学研究室">
+						</div>
+						<img class="kenkyu_logo" src="image/ninnko_logo.svg" alt="人間生活工学研究室_ロゴ">
+						<h4>人間生活工学研究室</h4>
+						<h5>1979年、工業デザインで日本で最初に創立された人間工学の研究室。ヒトの諸特性を生理学的・心理学的・形態学的に研究することにより、人間と機器や環境のあるべき関係を探究し、より良いデザインの提案を行う。</h5>-->
+					</div>
+					<div class="tab_content" id="bunka_content">
+						<img class="kenkyu_img" src="image/bunka.svg">
+						<img class="kenkyu_img_sp" src="image/bunka_sp_img.jpg">
+						<img class="kenkyu_img_sp kenkyu_sp_h5" src="image/bunka_sp_h5.svg">
+						<!--<img class="kenkyu_img_sp" src="image/bunka_sp.svg">
+							<img src="image/bunnka.jpg" alt="デザイン文化計画研究室">
+						</div>
+						<img class="kenkyu_logo" src="image/bunnka_logo.svg" alt="デザイン文化計画研究室ロゴ">
+						<h4>デザイン文化計画研究室</h4>
+						<h5>「文化＝生活」「デザイン＝生活づくり」と捉え、その対象を広く、社会・地域の人々の生活全体に向けている。急速なグローバル化が進展する今日にあって、地域の豊かな個性が息づく世界の創出を目指す。</h5>-->
+					</div>
+					<div class="tab_content" id="konteku_content">
+						<img class="kenkyu_img" src="image/konteku.svg">
+						<img class="kenkyu_img_sp" src="image/konteku_sp_img.jpg">
+						<img class="kenkyu_img_sp kenkyu_sp_h5" src="image/konteku_sp_h5.svg">
+						<!--<img class="kenkyu_img_sp" src="image/konteku_sp.svg">
+							<img src="image/konnteku.jpg" alt="コンテクスチュアルデザイン研究室">
+						</div>
+						<img class="kenkyu_logo" src="image/konnteku_logo.svg" alt="コンテクスチュアルデザイン研究室_ロゴ">
+						<h4>コンテクスチュアルデザイン研究室</h4>
+						<h5>社会的・歴史的文脈において人間活動とデザインの関係性を読み解きながら、自然や文化との共生のもとで人びとがよりよく生きることに向けて、場の形成や人びとの行動・経験文化のありかたをデザインとして提案する。</h5>-->
+					</div>
+					<div class="tab_content" id="sasute_content">
+						<img class="kenkyu_img" src="image/sasute.svg">
+						<img class="kenkyu_img_sp" src="image/sasute_sp_img.jpg">
+						<img class="kenkyu_img_sp kenkyu_sp_h5" src="image/sasute_sp_h5.svg">
+						<!--<img class="kenkyu_img_sp" src="image/sasute_sp.svg">
+							<img src="image/sasutenaburu.jpg" alt="サスティナブルデザイン研究室">
+						</div>
+						<img class="kenkyu_logo" src="image/sasute_logo.svg" alt="サスティナブルデザイン研究室_ロゴ">
+						<h4>サスティナブルデザイン研究室</h4>
+						<h5>本研究室では理想的な持続可能な社会のあるべき姿を考え、実現するために求められるプロダクト、システムのデザインを提案する。対象はエネルギー問題からフードロス問題まで幅広い。</h5>-->
+					</div>
+				</div>
+			</div>
+			<div id="kaisai" class="contents">
+				<h3 class="menu">開催概要</h3>
+				<div id="map">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3330.715830146897!2d139.82138535178376!3d35.71054166099394!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188f5cad2ce885%3A0xd22bb354b71b3a80!2z5Y2D6JGJ5aSn5a2m5aKo55Sw44Kt44Oj44Oz44OR44K5!5e0!3m2!1sja!2sjp!4v1637150827541!5m2!1sja!2sjp" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+				</div>
+				<div id="kaisaigaiyo_text">
+					<img id="kaisaigaiyo_text_pc" src="image/kaisaigaiyou_web.svg">
+					<img id="kaisaigaiyo_text_sp" src="image/kaisaigaiyou_sp.svg">
+						<!--<p class="kaiki">会期</p>
+						<p class="kaijyo">会場</p>
+						<p class="access">アクセス</p>	
+					</div>
+					<div id="kaisaigaiyo_text_honbun">
+						<p class="kaiki_text">2022年3月18日(Fri) - 3月20日(Sun)<br>11:00 - 19:00</p>
+						<p class="kaijyo_text">千葉大学墨田サテライトキャンパス<br>〒131-0044 東京都墨田区文花1-19-1</p>
+						<p class="access_text">押上駅より徒歩16分<br>曳舟駅より徒歩16分<br>小村井駅より徒歩7分</p>		      
+					</div>-->
+				</div>
+			</div>
+			<!--<div id="yoyaku" class="contents">
+				<h3 class="menu">事前予約について</h3>
+				<img class="yoyaku_text_pc" src="image/yoyaku1_pc.svg">
+				<img class="yoyaku_text_sp" src="image/yoyaku2_sp.svg">
+				<a href="https://godosotsuten.peatix.com" class="goudou_yoyaku_botan">
+					<h4 class="goudou_yoyaku_botan_text">予約受付ページへ</h4>
+				</a>
+				<img class="yoyaku_text_pc" src="image/yoyaku2_pc.svg">
+				<img class="yoyaku_text_sp" src="image/yoyaku3_sp.svg">
+				<a href="mailto:ishoten2022&#64;gmail.com"><img id="mail_icon" src="image/mail.svg"></a>
+				<a href="mailto:ishoten2022&#64;gmail.com"><h4 id="mail">chibasotsutendual@gmail.com</h4></a>
+			</div>-->
+			<div id="goudou" class="contents">
+				<h3 class="menu">合同卒展について</h3>
+				<img id="goudou_text_pc" src="image/godosotuten_pc.svg">
+				<img id="goudou_text_sp" src="image/goudou_sp.svg">
+				<a href="https://chibasotsuten-dual.studio.site" class="goudou_yoyaku_botan">
+					<h4 class="goudou_yoyaku_botan_text">合同卒展HPへ</h4>
+				</a>
+			</div>
+			<div id="kyousan" class="contents">
+				<h3 class="menu">協賛企業</h3>
+				<img id="kyosan_text_pc" src="image/kyosan_pc.svg" alt="協賛企業">
+				<img id="kyosan_text_sp" src="image/kyosan_sp.svg" alt="協賛企業">
+				<!-- 
+				<h4>(50音順)</h4>
+				<div id="kigyos">
+					<h4 class="kigyo">株式会社協同工芸社</h4>
+					<h4 class="kigyo">キョーラク株式会社</h4>
+					<h4 class="kigyo">株式会社JVCケンウッド・デザイン</h4>
+					<h4 class="kigyo">株式会社総合資格</h4>
+					<h4 class="kigyo">富士フイルム株式会社</h4>
+					<h4 class="kigyo">株式会社Too</h4>
+					<h4 class="kigyo">横河電機株式会社</h4>
+				</div>
+                                -->
+			</div>
+			<div id="footer">
+				<img src="image/logo_yoko.png">
+				<h5>千葉大学工学部総合工学科デザインコース卒業研究・制作展</h5>
+			</div>
+		</div>
+	</div>
+	
+	<script type="text/javascript" src="script/common.js"></script>
 </body>
 </html>
