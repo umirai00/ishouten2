@@ -1,271 +1,254 @@
-* {
-  box-sizing: border-box;
+@charset "UTF-8";
+/* CSS Document */
+html {
+  font-size: 62.5%;
 }
 
-body {
-  margin: 0;
-  font-family: "Hiragino Kaku Gothic ProN";
+@font-face {
+	font-family: 'Times';
+	src: url("../fonts/Times New Roman.ttf");
 }
 
-a {
-  text-decoration: none;
-}
+body {margin:0; padding:0; width: 100%; height: 100%;}
 
-.container {
-  width: 100%;
-  padding: 0 15px;
-  margin: 0 auto;
-}
+body{height: 4200px; background-color: #000000;font-family:Times;}
+#input{display: none;}	/*ロード前は消す*/
 
-.top-wrapper {
-  padding: 180px 0 100px 0;
-  background-image: url(top.png);
-  background-size: cover;
-  color: white;
-  text-align: center;
-}
+*{color: aliceblue;}
 
-.top-wrapper h1 {
-  opacity: 0.7;
-  font-size: 45px;
-  letter-spacing: 5px;
+/*ローディングアニメーション*/
+.loader,
+.loader:after {
+  border-radius: 50%;
+  width: 8em;
+  height: 8em;
 }
-
-.top-wrapper p {
-  opacity: 0.7;
-  font-size: 16px;
-  margin-bottom: 40px;
-}
-
-.btn-wrapper {
-  text-align: center;
-}
-
-.btn-wrapper p {
-  margin-bottom: 20px;
-}
-
-.signup {
-  background-color: #239b76;
-}
-
-.facebook {
-  background-color: #3b5998;
-  margin-right: 10px;
-}
-
-.twitter {
-  background-color: #55acee;
-}
-
-.btn {
-  padding: 8px 24px;
-  color: white;
-  display: inline-block;
-  opacity: 0.8;
-  border-radius: 4px;
-  text-align: center;
-}
-
-.btn:hover {
-  opacity: 1;
-}
-
-.fa {
-  margin-right: 5px;
-}
-
-header {
-  height: 65px;
-  width: 100%;
-  background-color: rgba(34,49,52,0.9);
-  position :fixed;
-  top: 0;
-  z-index: 10;
-}
-
-.logo {
-  width: 124px;
-  margin-top: 20px;
-}
-
-.header-left {
-  float: left;
-}
-
-.header-right {
-  float: right;
-  margin-right: -25px;
-}
-
-.header-right a {
-  line-height: 65px;
-  padding: 0 25px;
-  color: white;
-  display: block;
-  float: left;
-  transition: all 0.5s;
-}
-
-.header-right a:hover {
-  background-color: rgba(255,255,255,0.3);
-}
-
-.lesson-wrapper {
-  height: 580px;
-  padding-bottom: 80px;
-  padding-left: 5%;
-  padding-right: 5%;
-  background-color: #f7f7f7;
-  text-align: center;
-}
-
-.heading {
-  padding-top: 80px;
-  padding-bottom: 50px;
-  color: #5f5d60;
-}
-
-.heading h2 {
-  font-weight: normal;
-}
-
-.lesson {
-  float: left;
-  width: 25%;
-}
-
-.lesson-icon {
-  position: relative;
-}
-
-.lesson-icon p {
+.loader {
+  top:50%;
+  left:50%;
+  font-size: 10px;
   position: absolute;
-  top: 37%;
-  width: 100%;
-  color: white;
+  border-top: 0.35em solid rgba(255, 255, 255, 0.2);
+  border-right: 0.35em solid #ffffff;
+  border-bottom: 0.35em solid rgba(255, 255, 255, 0.2);
+  border-left: 0.35em solid #ffffff;
+  -webkit-animation: load8 3.0s infinite linear;
+  animation: load8 3.0s infinite linear;
 }
-
-.text-contents {
-  width: 80%;
-  display: inline-block;
-  margin-top: 15px;
-  font-size: 13px;
-  color: #b3aeb5;
-}
-
-.heading h3 {
-  font-weight: normal;
-}
-
-.message-wrapper {
-  border-bottom: 1px solid #eee;
-  padding-bottom: 80px;
-  text-align: center;
-}
-
-.message {
-  padding: 15px 40px;
-  background-color: #5dca88;
-  cursor: pointer;
-  box-shadow: 0px 7px #1a7940;
-}
-
-.message:active {
-  position: relative;
-  top: 7px;
-  box-shadow: none;
-}
-
-footer img {
-  width: 125px;
-}
-
-footer p {
-  color: #b3aeb5;
-  font-size: 12px;
-}
-
-footer {
-  padding-top: 30px;
-  padding-bottom: 20px;
-}
-
-.menu-icon {
-  color: white;
-  float: right;
-  font-size: 25px;
-  padding: 21px 0;
-  display: none;
-}
-
-.clear {
-  clear: left;
-}
-
-@media all and (max-width: 1000px) {
-  .lesson {
-    width: 50%;
-    margin-bottom: 50px;
+@-webkit-keyframes load8 {
+  0% {
+    -webkit-transform:translate(-50%,-50%)rotate(0deg);
+    transform:translate(-50%,-50%)rotate(0deg);
   }
-
-  .lesson-wrapper {
-    height: 990px;
+  100% {
+    -webkit-transform:translate(-50%,-50%)rotate(360deg);
+    transform:translate(-50%,-50%)rotate(360deg);
   }
-
-  footer {
-    text-align: center;
+}
+@keyframes load8 {
+  0% {
+    -webkit-transform:translate(-50%,-50%)rotate(0deg);
+    transform:translate(-50%,-50%)rotate(0deg);
+  }
+  100% {
+    -webkit-transform:translate(-50%,-50%)rotate(360deg);
+    transform:translate(-50%,-50%)rotate(360deg);
   }
 }
 
-@media all and (max-width: 750px) {
-  .top-wrapper h1 {
-    font-size: 32px;
-  }
-
-  .heading h2 {
-    font-size: 20px;
-  }
+/*ロード画面*/
+#load{
+	visibility: visible;
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	z-index: 12;
+	background-color:#000000;
+	transition: ease 2s;
+	pointer-events: none;
+	opacity: 1;
+}
+#load.fade{
+	opacity: 0;
+	visibility: hidden;
 }
 
-@media all and (max-width: 670px) {
-  .header-right {
-    display: none;
-  }
+/*背景*/
+#img{display:none;}
+#img_sp{display:none;}
+@media (min-width: 769px) {
+	#img{
+		display:block;
+		position: fixed;
+		background-image: url("../image/メインビジュアル_web_軽量版.jpg");
+		opacity: 0.7;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+		width: 100vw;
+		height:100vh
+	}
+}
+@media (max-width: 769px){
+	#img_sp{display:block;
+		position: fixed;
+		background-image: url("../image/visual_sp.png");
+		opacity: 0.7;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+		width: 100vw;
+		height:100vh;
+	}
+}
+/*重ね順*/
+#z-index0{z-index: 0;}/*開始概要*/
+#z-index1{z-index: 1;}/*意匠展ロゴ*/
+#z-index5{z-index: 5;}/*concept*/
+#z-index11{z-index: 11;}/*what*/
 
-  .menu-icon {
-    display: block;
-  }
+/*意匠展ロゴ*/
+.ishouten img{width: 30vh;}
+.ishouten{
+	font-size: 3.0em;
+	text-align: center;
+	top: 50%;
+	width: 100%;
+	position: fixed;
+	transform: translateY(-50%); 
+}
+.ishouten img{transition: ease 2.0s;}	/*2秒かけて動く*/
+.ishoutenS img{transform: translateY(-20vh)scale(1.5,1.5);}	/*上に50px移動、1.5倍拡大 1900pxまでスクロールすると追加される*/
 
-  .top-wrapper .btn {
-    width: 100%;
-  }
+/*開催概要*/
+.info{
+	text-align: center;
+	top: 87%;
+	left: 50%;
+	position: fixed;
+	width: 40%;
+    	transform: translate(-50%, 0);
+}
+.info {transition: ease 2.0s;opacity: 0;filter: blur(8px);letter-spacing: 5px;}	/*2秒掛けでぼかしが消え、100px上に移動*/	
+.infoS {transform: translate(-50%,-29vh); opacity:1;filter: blur(0px);} 			/*2250pxまでスクロールで追加*/	
 
-  .twitter {
-    margin-top: 10px;
-  }
+.sns img{
+	height: 4vh; margin: 15px;
+	bottom:10%;
+}
+.sns{
+	margin-top:1.5rem;
+}
+.icon:hover{opacity: 0.7;}
 
-  .top-wrapper {
-    text-align: left;
-  }
+/*depth*/
+#log{z-index: 13;}
+.sink{
+	position: fixed;
+	text-align: center;
+	transform: translate(-50%, -50%);
+	left: 50%;
+	top: 85%;
+	width: 100%;
+	pointer-events: none;
+}
+.sink div{transition: ease 2.0s;}
+.log2 div{transform: translate(0.5vw,-36vh)scale(3.5,3.5);} 	/*2021pxまでスクロールで追加*/
 
-  .top-wrapper h1 {
-    font-size: 24px;
-  }
+#log0{
+	margin-right: 2.5vw;
+	margin-left: 2.5vw;
+	letter-spacing: 0.5rem;
+}
+.sink h2{width: 100px;}
+.sink h1{width: 100px;}
+/*'depth'と'm'*/
+.depth{
+	font-size: 2vh;
+	display: inline-block;
+	opacity: 1;
+	transition: ease 2s;
+	letter-spacing: 0.2rem;
+	font-weight: 100;
+}
+.depout h1{opacity:0;} 	/*2021pxスクロールで'depth'と'm'を消す*/
 
-  .top-wrapper p {
-    font-size: 14px;
-  }
+/*concept,what*/
+.layer{
+	height: 100%;
+	position: relative;
+	position: fixed;
+	width: 100%;
+}
+#concept{
+	width: 48rem;
+	position: absolute;
+	top: 50%;
+	left: 3%;
+	transform: translate(0%,-50%);
+}
+#what{
+	width: 28rem;
+	position: absolute;
+	top: 50%;
+	right: 8%;
+	transform: translate(0%,-50%);
+}
 
-  .lesson {
-    width: 100%;
-  }
+/*画像pc用*/
+.img_pc {
+	display: block;
+}
+.img_sp {
+	display: none;
+}
 
-  .lesson-wrapper {
-    height: 1700px;
-  }
-
-  .message-wrapper .btn {
-    width: 100%;
-  }
+/*スマホ用(縦長のとき)*/
+@media (orientation: portrait) {
+	/*画像*/
+	.img_pc {
+		display: none;
+	}
+	.img_sp {
+		display: block;
+	}
+	/*意匠展ロゴ*/
+	.ishouten img{
+		width: 40vw;
+	}
+	.ishoutenS img{transform: translateY(-24vh)scale(1.5,1.5);}
+	/*depth*/
+    	.sink{
+		left: 50%;
+        	top: 90%;
+    	}
+	.depth{
+		font-size: 2vh;
+       		margin-right: 1vw;
+	    	margin-left: 1vw;
+	}
+	.depth_m{margin-left: -3vw;}
+	.log2 div{
+		transform: translate(-3vw,-46vh)scale(2, 2);
+	}
+	/*concept, what*/
+    	#concept {
+		width: 70%;
+		position: absolute;
+		top: 48%;
+    		left: 50%;
+		transform: translate(-50%,-50%);
+	}
+	#what {
+		width: 70%;
+		position: absolute;
+		top: 50%;
+    		left: 50%;
+		transform: translate(-50%,-50%);
+	}
+	/*開催概要*/
+	.info{
+		width: 60%;
+	}
+	.infoS {transform: translate(-50%,-141%); opacity:1;filter: blur(0px);}
 }
